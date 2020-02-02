@@ -18,17 +18,17 @@ https://smartwf.ir
 
 ## Todo list
 
-- [x] Home Page
+- [x] <del>Home Page</del>
 - [ ] Resume
 - [ ] Tell me a secret Page
 - [ ] Last Works Page
 - [ ] Message box Page
 - [ ] Blog Page
 - [ ] About me Page
-- [x] sound link
-- [x] gif link
-- [x] Dark/light
-- [x] Background Music
+- [x] <del>sound link</del>
+- [x] <del>gif link</del>
+- [x] <del>Dark/light</del>
+- [x] <del>Background Music</del>
 - [ ] Responsive
 - [ ] Button for Background Music
 - [ ] Know more About me Button in home page
