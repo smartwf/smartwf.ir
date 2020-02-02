@@ -13,3 +13,28 @@ https://smartwf.ir
     <img src="https://img.shields.io/badge/Donate-%E2%99%A5-17b978.svg?longCache=true&style=for-the-badge">
   </a>
 </p>
+
+----------
+
+## Todo list
+
+- [x] Home Page
+- [ ] Resume
+- [ ] Tell me a secret Page
+- [ ] Last Works Page
+- [ ] Message box Page
+- [ ] Blog Page
+- [ ] About me Page
+- [x] sound link
+- [x] gif link
+- [x] Dark/light
+- [x] Background Music
+- [ ] Responsive
+- [ ] Button for Background Music
+- [ ] Know more About me Button in home page
+- [ ] get Virgool Posts and show in the Blog Page
+- [ ] Multi Language
+- [ ] Auto Detect Language from ip
+- [ ] Write Better About text in home page
+- [ ] add funny messages for Dark/light switch
+- [ ] Optimization
