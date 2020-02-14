@@ -130,7 +130,7 @@ main h2 a::before{
   z-index: -1;
 }
 
-main p{
+main article{
   font-size: 22px;
   text-align: justify;
   line-height: 40px;
@@ -288,8 +288,8 @@ body.dark header ul li a{ color: rgb(220,220,220); }
 body.light main h2{ color: #363636; }
 body.dark main h2{ color: #fff; }
 
-body.light main p{ color: #222; }
-body.dark main p{ color: #eee; }
+body.light main article{ color: #222; }
+body.dark main article{ color: #eee; }
 
 body.light #github svg{ fill:#eee; color:#333; }
 body.dark #github svg{ fill:#333; color:#eee; }
