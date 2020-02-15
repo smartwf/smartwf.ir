@@ -25,6 +25,7 @@ https://smartwf.ir
 - [ ] Message box Page
 - [ ] Blog Page
 - [ ] About me Page
+- [ ] Routing
 - [x] <del>sound link</del>
 - [x] <del>gif link</del>
 - [x] <del>Dark/light</del>
@@ -37,4 +38,6 @@ https://smartwf.ir
 - [ ] Auto Detect Language from ip
 - [ ] Write Better About text in home page
 - [ ] add funny messages for Dark/light switch
+- [ ] Animation
+- [ ] Loading
 - [ ] Optimization
