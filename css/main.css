@@ -13,7 +13,7 @@ header{
   width: 100%;
   left: 0;
   top: 0;
-  z-index: -1;
+  z-index: 1;
 }
 
 header nav{
@@ -102,13 +102,44 @@ header ul li{
 
 header ul li a{
   font-size: 17px;
+  position: relative;
+  padding: 10px 0;
+}
+
+header ul li a::before{
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  width: 0;
+  height: 10px;
+  transition: 1s;
+  z-index: -1;
+  opacity: .5;
+}
+
+header ul li a.lactive::before{
+  width: 100%;
+  opacity: .1;
+}
+
+header ul li a:hover::before{
+  width: 100%;
+}
+
+page{
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: block;
 }
 
 main{
   max-width: 70rem;
   margin: 0 auto;
   position: relative;
-  margin-top: 20rem;
+  padding-top: 8rem;
+  padding-bottom: 60px;
 }
 
 main h2{
@@ -148,7 +179,8 @@ main p a::before{
 }
 
 main section{
-  margin-right: 370px;
+  padding-right: 370px;
+  position: relative;
 }
 
 main .links{
@@ -210,11 +242,15 @@ a{
   position: unset;
 }
 
+#github svg{
+  z-index: 10000;
+}
+
 footer{
   position: absolute;
   bottom: 0;
-  width: 100%;
   left: 0;
+  width: 100%;
   text-align: center;
   margin-bottom: 15px;
   color: #252525;
@@ -270,6 +306,34 @@ footer .links a:hover::before{
   animation: pulse 1s ease infinite;
 }
 
+loading{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: white;
+  transition: opacity 1.5s;
+  display: none;
+}
+
+loading img{
+  width: 250px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body.loading{
+  overflow: hidden;
+}
+
+body.loading loading{
+  display: block;
+}
+
 body.light{ background: #fff; }
 body.dark{ background: #222; }
 
@@ -300,8 +364,15 @@ body.dark footer{ color: #fafafa; }
 body.light footer .links a{ color: #606060; }
 body.dark footer .links a{ color: #ccc; }
 
+body.light loading{ background: #fff; }
+body.dark loading{ background: #222; }
+body.dark loading img{ filter: invert(.868); }
 
+body.light header ul li a::before{ background: #eee; }
+body.dark header ul li a::before{ opacity: .05; background: #aaa; }
 
+body.light header ul li a.lactive::before{ background: #404040; }
+body.dark header ul li a.lactive::before{ background: #fff; }
 
 
 @keyframes pulse {
@@ -357,4 +428,146 @@ body.dark footer .links a{ color: #ccc; }
   padding: 15px;
   text-align: center;
   font-weight: 400;
+}
+
+.page-index main{
+  padding-top: 20rem;
+}
+
+.page-blog article{
+  position: relative;
+  max-width: 55rem;
+  margin: 0 auto;
+  margin-bottom: 48px;
+  height: 150px;
+  text-align: inherit;
+}
+
+.page-blog article content{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.page-blog article content title{
+  display: block;
+  font-size: 24px;
+  font-weight: 600;
+  margin-right: 170px;
+  max-height: 45px;
+  overflow: hidden;
+}
+
+.page-blog article content description{
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 200;
+  text-align: right;
+  max-width: 50rem;
+  margin-right: 170px;
+  display: block;
+  margin-top: 8px;
+}
+
+.page-blog article content .read-more{
+  position: absolute;
+  right: 0;
+  margin-right: 170px;
+  bottom: 5px;
+  font-size: 14px;
+  font-weight: 300;
+  border-radius: 50px;
+  padding: 0 15px;
+}
+
+.page-blog article content .read-more svg{
+  display: inline;
+  height: 17px;
+  vertical-align: middle;
+  padding-left: 3px;
+  transition: 1s;
+}
+
+.page-blog article content time{
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+  font-size: 12px;
+  font-weight: 100;
+}
+
+.page-blog article content .read-more:hover svg{
+  transform: translateX(5px);
+}
+
+.page-blog #nothing-to-show{
+  text-align: center;
+  margin-top: 20rem;
+  color: #777;
+}
+
+.page-blog article figure{
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  background-size: cover !important;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0;
+  border-radius: 5px;
+}
+
+body.light .page-blog article content title{color: #333;}
+body.dark .page-blog article content title{color: #ddd;}
+
+body.light .page-blog article content description{color: #777;}
+body.dark .page-blog article content description{color: #ccc;}
+
+body.light .page-blog article content time{color: #666;}
+body.dark .page-blog article content time{color: #bbb;}
+
+body.light .page-blog article content .read-more{background: #eee; color: #444;}
+body.dark .page-blog article content .read-more{background: #111; color: #ccc;}
+
+body.light .page-blog article content .read-more svg path{fill: #444;}
+body.dark .page-blog article content .read-more svg path{fill: #ccc;}
+
+.page-404 section{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  transform: translate(-50%,-50%);
+}
+
+.page-404 section::before, .page-404 section::after{
+  content: '4';
+  position: absolute;
+  top: 0;
+  font-size: 190px;
+  font-family: vazir;
+  font-weight: 600;
+  color: #eee;
+}
+
+.page-404 section::before{
+  left: -140px;
+  transform: translateY(10%);
+  animation: spacemove 7s ease infinite;
+  animation-delay: 1s;
+}
+
+.page-404 section::after{
+  right: -140px;
+  transform: translateY(-30%);
+  animation: spacemove 6s ease infinite;
+}
+
+
+.page-404 section img{
+  width: 170px;
+  animation: spacemove 9s ease infinite;
 }

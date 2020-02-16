@@ -22,22 +22,24 @@ https://smartwf.ir
 - [ ] Resume
 - [ ] Tell me a secret Page
 - [ ] Last Works Page
-- [ ] Message box Page
-- [ ] Blog Page
+- [ ] Message Page
+- [x] <del>Blog Page</del>
 - [ ] About me Page
-- [ ] Routing
+- [x] <del>404 page</del>
+- [x] <del>Routing</del>
 - [x] <del>sound link</del>
 - [x] <del>gif link</del>
-- [x] <del>Dark/light</del>
+- [x] <del>Dark/Light</del>
+- [x] <del>Save and remember Dark/Light mode</del>
 - [x] <del>Background Music</del>
 - [ ] Responsive
 - [ ] Button for Background Music
 - [ ] Know more About me Button in home page
-- [ ] get Virgool Posts and show in the Blog Page
+- [x] <del>get Virgool Posts and show in the Blog Page</del>
 - [ ] Multi Language
 - [ ] Auto Detect Language from ip
 - [ ] Write Better About text in home page
 - [ ] add funny messages for Dark/light switch
 - [ ] Animation
-- [ ] Loading
+- [x] <del>Loading</del>
 - [ ] Optimization
